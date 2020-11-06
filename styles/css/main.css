@@ -29,7 +29,6 @@ section {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 72px);
-  height: calc(var(--vh) * 100 - 72px);
 }
 
 header {
@@ -55,6 +54,7 @@ header {
 .logo {
   background-image: url(../../images/logo.png);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .header_load {
