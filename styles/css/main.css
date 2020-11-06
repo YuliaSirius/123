@@ -30,9 +30,9 @@ p {
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 1200px;
   padding: 0 16px;
-  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 section {
@@ -147,6 +147,10 @@ main {
 
 .appstore {
   background-image: url(../../images/appstore.png);
+}
+
+.aboutAlinaDesktop {
+  display: none;
 }
 
 .aboutAlina_background {
@@ -283,8 +287,375 @@ footer p {
 
 .footer_line {
   opacity: 0.2;
-  border: 1px solid #8d8d93;
+  border-bottom: 1px solid #8d8d93;
   width: 85%;
+}
+
+@media all and (min-width: 376px) {
+  header {
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+  header .googleplay,
+header .appstore {
+    margin: 0 12px;
+  }
+
+  .header_logo {
+    width: 75px;
+    height: 32px;
+  }
+
+  .header_load {
+    width: 108px;
+    height: 32px;
+  }
+
+  .main_text_caption {
+    font-size: 40px;
+    margin-bottom: 19px;
+  }
+
+  .main {
+    height: 745px;
+  }
+
+  .main_text {
+    margin-bottom: 44px;
+  }
+
+  .main_background {
+    max-height: 320px;
+    margin-bottom: 108px;
+  }
+
+  .ellipse {
+    width: 580px;
+  }
+
+  .main_link_load {
+    width: 160px;
+    height: 48px;
+  }
+
+  .googleplay,
+.appstore {
+    margin: 0 19px;
+  }
+
+  .aboutAlina_text1 {
+    text-align: center;
+  }
+
+  h2,
+h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  h2:before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: linear-gradient(180deg, #f36a38 0%, #dd230d 100%);
+    opacity: 0.5;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+  }
+
+  h2:after {
+    margin-left: 30px;
+  }
+
+  .text_part1 {
+    max-width: 500px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .text_part2 {
+    max-width: 440px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+
+  .aboutAlina_background {
+    height: 320px;
+    margin-bottom: 40px;
+  }
+
+  .aboutAlina_text2 p {
+    max-width: 500px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .app_text {
+    text-align: center;
+  }
+  .app_text .text_part2 {
+    max-width: 500px;
+    margin-bottom: 63px;
+  }
+
+  .app_background {
+    height: 230px;
+    margin-bottom: 96px;
+  }
+
+  .app_background .ellipse {
+    top: 63%;
+    left: calc(50% - 271px);
+  }
+
+  .download {
+    position: relative;
+    height: 541px;
+  }
+
+  .download h3 {
+    max-width: none;
+  }
+
+  .download_link_load {
+    width: 160px;
+    height: 48px;
+  }
+
+  .download img {
+    max-height: 342px;
+  }
+
+  footer {
+    height: 349px;
+    padding: 60px 0;
+  }
+
+  .footer_media {
+    margin-bottom: 14px;
+  }
+
+  .footer_line {
+    border-bottom: 1px solid #8d8d93;
+    width: 91%;
+    margin-bottom: 10px;
+  }
+
+  .footer_media a {
+    margin: 0 13px;
+  }
+}
+@media all and (min-width: 600px) {
+  footer nav {
+    max-width: none;
+  }
+}
+@media all and (min-width: 769px) {
+  body {
+    font-size: 18px;
+  }
+
+  .header {
+    height: 82px;
+  }
+
+  .header_logo {
+    width: 98px;
+    height: 42px;
+  }
+
+  .header_load {
+    width: 146px;
+    height: 42px;
+  }
+
+  .main {
+    align-items: start;
+    justify-content: center;
+  }
+  .main .googleplay,
+.main .appstore {
+    margin: 0 16px;
+    margin: 0 40px 0 0;
+  }
+
+  .main_text_caption {
+    font-size: 62px;
+  }
+
+  .main_text_content {
+    font-size: 24px;
+    text-align: start;
+  }
+
+  .main_background {
+    position: absolute;
+    left: 48.5%;
+    max-height: 420px;
+    margin-bottom: 27px;
+  }
+
+  .ellipse {
+    width: 760px;
+  }
+
+  .main_text_caption {
+    margin-bottom: 27px;
+    margin-top: 36px;
+  }
+
+  .main_text_content {
+    margin-bottom: 15px;
+  }
+
+  .text_part1,
+.text_part2 {
+    max-width: none;
+    text-align: start;
+  }
+
+  .aboutAlina {
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    height: 780px;
+    padding-top: 20px;
+    padding-left: 55%;
+  }
+  .aboutAlina h2 {
+    margin-left: -90px;
+  }
+
+  .aboutAlinaDesktop {
+    display: inline-block;
+    position: absolute;
+    left: -14px;
+    top: 16%;
+    max-width: 55%;
+  }
+
+  .aboutAlina_background {
+    display: none;
+  }
+
+  .aboutAlina_text1 {
+    max-width: 500px;
+    text-align: start;
+  }
+
+  h2,
+h3 {
+    font-size: 44px;
+    margin-bottom: 45px;
+  }
+
+  h2:after {
+    display: none;
+  }
+
+  h2:before {
+    content: "";
+    width: 60px;
+  }
+
+  .aboutAlina_text2 p {
+    text-align: start;
+  }
+
+  section {
+    padding: 0;
+  }
+
+  p {
+    line-height: 160%;
+  }
+
+  .text_part1,
+.text_part2 {
+    margin-bottom: 22px;
+  }
+
+  .app {
+    position: relative;
+    height: 796px;
+    flex-direction: row;
+  }
+  .app h2 {
+    margin-left: -92px;
+  }
+
+  .app_text {
+    text-align: start;
+    max-width: 520px;
+    margin-right: 112px;
+  }
+
+  .app_background {
+    max-width: 47%;
+    height: 292px;
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+
+  .app_background .ellipse {
+    left: calc(50% - 340px);
+  }
+
+  .app_background .circle {
+    left: -10%;
+  }
+
+  .download {
+    margin-left: calc((-100vw + 1200px) / 2);
+    height: 514px;
+    align-items: start;
+    justify-content: center;
+    padding-left: 30%;
+  }
+  .download .googleplay,
+.download .appstore {
+    margin: 0 40px 0 0;
+  }
+
+  .download img {
+    position: absolute;
+    max-height: 490px;
+    left: 58%;
+  }
+
+  .download h3 {
+    max-width: 400px;
+    margin-bottom: 63px;
+    text-align: start;
+  }
+
+  footer {
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    height: 258px;
+    align-items: flex-start;
+  }
+
+  .footer_line {
+    position: absolute;
+    bottom: 115px;
+  }
+
+  footer p {
+    position: absolute;
+    bottom: 56px;
+  }
+
+  .footer_logo {
+    margin-right: 205px;
+  }
+
+  footer nav {
+    margin-right: 205px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
