@@ -7,14 +7,26 @@
   font-family: gilroySemiBold;
   src: url(../../fonts/Gilroy-Semibold.woff) format("webopen"), url(../../fonts/Gilroy-Semibold.ttf) format("truetype"), url(../../fonts/Gilroy-Semibold.eoteot?#iefix) format("embedded-opentype");
 }
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 body {
   background-color: #f6f6f6;
   font-family: gilroyRegular;
   font-size: 16px;
+  overflow: scroll;
 }
 
 p {
   color: #454545;
+  line-height: 150%;
 }
 
 .container {
@@ -26,9 +38,8 @@ p {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: calc(100vh - 72px);
+  padding: 60px 0;
 }
 
 header {
@@ -44,6 +55,9 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 72px;
+}
+.header .download_links {
+  margin-right: -10px;
 }
 
 .header_logo {
@@ -65,11 +79,12 @@ header {
 main {
   padding-top: 72px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .main {
-  padding-top: 38px;
   box-sizing: border-box;
+  height: 670px;
 }
 
 .main_text {
@@ -91,19 +106,22 @@ main {
 
 .ellipse {
   position: relative;
-  transform: translateY(-50%);
   z-index: -10;
   top: 100%;
+  width: 504px;
 }
 
 .main_background {
   background-image: url(../../images/main.png);
   background-repeat: no-repeat;
-  background-position-x: 50%;
-  max-height: 283px;
+  background-position-x: 48%;
+  max-height: 285px;
   background-size: contain;
-  margin-bottom: 92px;
+  margin-bottom: 97px;
   height: 100%;
+}
+.main_background .ellipse {
+  transform: translate(3%, -52%);
 }
 
 .download_links {
@@ -143,7 +161,7 @@ main {
   margin-bottom: 30px;
 }
 .aboutAlina_background img {
-  height: 94%;
+  height: 92%;
 }
 
 h2,
@@ -185,35 +203,41 @@ h2:after {
   background-position-x: 50%;
   background-position-y: 50%;
   background-size: contain;
-  max-height: 175px;
-  height: 100%;
-  margin-top: 80px;
+  height: 192px;
+  margin-top: 57px;
+  margin-bottom: 80px;
 }
 .app_background .circle {
-  width: 100%;
+  width: 105%;
   position: absolute;
   z-index: -10;
   top: -80px;
+  left: -6%;
+}
+.app_background .ellipse {
+  top: 63%;
+  left: calc(50% - 229px);
 }
 
 .download {
-  justify-content: start;
-  padding-top: 60px;
   position: relative;
-  height: 514px;
+  height: 500px;
   background: linear-gradient(180deg, #50c8dd 0%, #23c1dd 100%);
   margin-left: -16px;
   width: 100vw;
+  box-sizing: border-box;
 }
 .download h3 {
   color: #fff;
   max-width: 215px;
   text-align: center;
+  line-height: 120%;
+  margin-bottom: 32px;
 }
 .download img {
   position: absolute;
   bottom: 0;
-  max-height: 280px;
+  max-height: 282px;
   height: 100%;
 }
 
@@ -230,6 +254,7 @@ footer {
   height: 378px;
   background-color: #1f1f1f;
   padding: 40px 0;
+  box-sizing: border-box;
 }
 footer nav {
   max-width: 300px;
@@ -238,7 +263,7 @@ footer nav a {
   text-decoration: none;
   font-family: gilroySemiBold;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 48px;
   color: #ffffff;
   margin: 0 25px;
 }

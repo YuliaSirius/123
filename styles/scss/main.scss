@@ -1,13 +1,23 @@
 @import './reset.css';
 @import './fonts.scss';
 
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
 body {
   background-color: #f6f6f6;
   font-family: gilroyRegular;
   font-size: 16px;
+  overflow: scroll;
 }
 p {
   color: #454545;
+  line-height: 150%;
 }
 .container {
   max-width: 1920px;
@@ -17,10 +27,8 @@ p {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: calc(100vh - 72px);
-  // height: calc(var(--vh) * 100 - 72px);
+  padding: 60px 0;
 }
 //header
 header {
@@ -36,6 +44,9 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 72px;
+  .download_links {
+    margin-right: -10px;
+  }
 }
 .header_logo {
   width: 57px;
@@ -57,10 +68,11 @@ header {
 main {
   padding-top: 72px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .main {
-  padding-top: 38px;
   box-sizing: border-box;
+  height: 670px;
 }
 .main_text {
   margin-bottom: 30px;
@@ -78,18 +90,21 @@ main {
 }
 .ellipse {
   position: relative;
-  transform: translateY(-50%);
   z-index: -10;
   top: 100%;
+  width: 504px;
 }
 .main_background {
   background-image: url(../../images/main.png);
   background-repeat: no-repeat;
-  background-position-x: 50%;
-  max-height: 283px;
+  background-position-x: 48%;
+  max-height: 285px;
   background-size: contain;
-  margin-bottom: 92px;
+  margin-bottom: 97px;
   height: 100%;
+  .ellipse {
+    transform: translate(3%, -52%);
+  }
 }
 .download_links {
   display: flex;
@@ -113,6 +128,7 @@ main {
 }
 
 // aboutAlina
+
 .aboutAlina_background {
   display: flex;
   height: 260px;
@@ -124,7 +140,7 @@ main {
   align-items: flex-end;
   margin-bottom: 30px;
   img {
-    height: 94%;
+    height: 92%;
   }
 }
 h2,
@@ -144,7 +160,6 @@ h2:after {
   height: 2px;
   background: linear-gradient(180deg, #f36a38 0%, #dd230d 100%);
   opacity: 0.5;
-  // display: block;
   display: inline-block;
   vertical-align: middle;
   margin-left: 15px;
@@ -165,35 +180,41 @@ h2:after {
   background-position-x: 50%;
   background-position-y: 50%;
   background-size: contain;
-  // margin-bottom: 92px;
-  max-height: 175px;
-  height: 100%;
-  margin-top: 80px;
+   height: 192px;
+  margin-top: 57px;
+  margin-bottom: 80px;
+
   .circle {
-    width: 100%;
+    width: 105%;
     position: absolute;
     z-index: -10;
     top: -80px;
+    left: -6%;
+  }
+  .ellipse {
+    top: 63%;
+    left: calc(50% - 229px);
   }
 }
 // download
 .download {
-  justify-content: start;
-  padding-top: 60px;
   position: relative;
-  height: 514px;
+  height: 500px;
   background: linear-gradient(180deg, #50c8dd 0%, #23c1dd 100%);
   margin-left: -16px;
   width: 100vw;
+  box-sizing: border-box;
   h3 {
     color: #fff;
     max-width: 215px;
     text-align: center;
+    line-height: 120%;
+    margin-bottom: 32px;
   }
   img {
     position: absolute;
     bottom: 0;
-    max-height: 280px;
+    max-height: 282px;
     height: 100%;
   }
 }
@@ -211,13 +232,14 @@ footer {
   height: 378px;
   background-color: #1f1f1f;
   padding: 40px 0;
+  box-sizing: border-box;
   nav {
     max-width: 300px;
     a {
       text-decoration: none;
       font-family: gilroySemiBold;
       font-size: 16px;
-      line-height: 30px;
+      line-height: 48px;
       color: #ffffff;
       margin: 0 25px;
     }
