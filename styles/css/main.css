@@ -23,11 +23,21 @@ p {
   box-sizing: border-box;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 72px);
+  height: calc(var(--vh) * 100 - 72px);
+}
+
 header {
   position: fixed;
   width: 100%;
   background-color: #f6f6f6;
   box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.2);
+  z-index: 15;
 }
 
 .header {
@@ -40,42 +50,26 @@ header {
 .header_logo {
   width: 57px;
   height: 24px;
+}
+
+.logo {
   background-image: url(../../images/logo.png);
+  background-size: contain;
 }
 
 .header_load {
-  display: flex;
-}
-
-.header_load_googleplay {
-  width: 81px;
-  height: 24px;
-  background-image: url(../../images/googleplay.jpg);
-  margin-right: 16px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.header_load_appstore {
   width: 83px;
   height: 24px;
-  background-image: url(../../images/appstore.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 main {
   padding-top: 72px;
+  overflow-y: scroll;
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 72px);
-  height: calc(var(--vh) * 100 - 72px);
   padding-top: 38px;
+  box-sizing: border-box;
 }
 
 .main_text {
@@ -88,10 +82,18 @@ main {
   line-height: 100%;
   text-align: center;
   margin-bottom: 19px;
+  color: #454545;
 }
 
 .main_text_content {
   text-align: center;
+}
+
+.ellipse {
+  position: relative;
+  transform: translateY(-50%);
+  z-index: -10;
+  top: 100%;
 }
 
 .main_background {
@@ -103,39 +105,161 @@ main {
   margin-bottom: 92px;
   height: 100%;
 }
-.main_background svg {
-  position: relative;
-  transform: translateY(-50%);
-  z-index: -10;
-  top: 100%;
-}
 
-.main_link_load {
+.download_links {
   display: flex;
   justify-content: center;
 }
 
-.main_link_load_googleplay,
-.main_link_load_appstore {
+.main_link_load {
   width: 150px;
   height: 45px;
+}
+
+.googleplay,
+.appstore {
+  margin: 0 8px;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0 8px;
 }
 
-.main_link_load_googleplay {
-  background-image: url(../../images/googleplay.jpg);
+.googleplay {
+  background-image: url(../../images/googleplay.png);
 }
 
-.main_link_load_appstore {
-  background-image: url(../../images/appstore.jpg);
+.appstore {
+  background-image: url(../../images/appstore.png);
 }
 
 .aboutAlina_background {
+  display: flex;
   height: 260px;
+  justify-content: center;
   width: 100vw;
   background: linear-gradient(180deg, #50c8dd 0%, #23c1dd 100%);
+  margin-left: -16px;
+  margin-right: -16px;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.aboutAlina_background img {
+  height: 94%;
+}
+
+h2,
+h3 {
+  font-family: gilroySemiBold;
+  font-size: 24px;
+  line-height: 100%;
+  color: #454545;
+  margin-bottom: 20px;
+}
+h2 span,
+h3 span {
+  color: #dd230d;
+}
+
+h2:after {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: linear-gradient(180deg, #f36a38 0%, #dd230d 100%);
+  opacity: 0.5;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+.text_part1 {
+  margin-bottom: 10px;
+}
+
+.text_part2 {
+  margin-bottom: 30px;
+}
+
+.app_background {
+  position: relative;
+  background-image: url(../../images/app.png);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: contain;
+  max-height: 175px;
+  height: 100%;
+  margin-top: 80px;
+}
+.app_background .circle {
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+  top: -80px;
+}
+
+.download {
+  justify-content: start;
+  padding-top: 60px;
+  position: relative;
+  height: 514px;
+  background: linear-gradient(180deg, #50c8dd 0%, #23c1dd 100%);
+  margin-left: -16px;
+  width: 100vw;
+}
+.download h3 {
+  color: #fff;
+  max-width: 215px;
+  text-align: center;
+}
+.download img {
+  position: absolute;
+  bottom: 0;
+  max-height: 280px;
+  height: 100%;
+}
+
+.download_link_load {
+  width: 140px;
+  height: 42px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 378px;
+  background-color: #1f1f1f;
+  padding: 40px 0;
+}
+footer nav {
+  max-width: 300px;
+}
+footer nav a {
+  text-decoration: none;
+  font-family: gilroySemiBold;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  margin: 0 25px;
+}
+footer p {
+  font-size: 14px;
+  color: #c2c2c2;
+}
+
+.footer_logo {
+  width: 100px;
+  height: 42px;
+}
+
+.footer_media a {
+  margin: 0 20px;
+}
+
+.footer_line {
+  opacity: 0.2;
+  border: 1px solid #8d8d93;
+  width: 85%;
 }
 
 /*# sourceMappingURL=main.css.map */
