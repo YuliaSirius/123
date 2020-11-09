@@ -71,6 +71,16 @@ header {
   background-repeat: no-repeat;
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .logo {
+    background-image: url(../../images/logo2x.png);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  .logo {
+    background-image: url(../../images/logo3x.png);
+  }
+}
 .header_load {
   width: 83px;
   height: 24px;
