@@ -107,6 +107,18 @@ main {
     transform: translate(3%, -52%);
   }
 }
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .main_background {
+    background-image: url(../../images/main2x.png);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  .main_background {
+    background-image: url(../../images/main3x.png);
+  }
+}
+
 .download_links {
   display: flex;
   justify-content: center;
@@ -126,6 +138,26 @@ main {
 }
 .appstore {
   background-image: url(../../images/appstore.png);
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .googleplay {
+    background-image: url(../../images/googleplay2x.png);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  .googleplay {
+    background-image: url(../../images/googleplay3x.png);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .appstore {
+    background-image: url(../../images/appstore2x.png);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  .appstore {
+    background-image: url(../../images/appstore3x.png);
+  }
 }
 
 // aboutAlina
@@ -197,6 +229,16 @@ h2:after {
   .ellipse {
     top: 63%;
     left: calc(50% - 229px);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .app_background {
+    background-image: url(../../images/app2x.png);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  .app_background {
+    background-image: url(../../images/app3x.png);
   }
 }
 // download
@@ -557,8 +599,7 @@ footer {
     margin-bottom: 63px;
     text-align: start;
   }
-
- }
+}
 
 @media all and (min-width: 1232px) {
   .download {
